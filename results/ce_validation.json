@@ -1,0 +1,290 @@
+[
+  {
+    "game": "Battle of the Sexes",
+    "real_ce_ok": true,
+    "fake_ce_ok": false,
+    "real_details": [
+      {
+        "player": "row",
+        "recommendation": "Opera",
+        "deviation": "Football",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 0.0,
+        "margin": 3.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Football",
+        "deviation": "Opera",
+        "obey_payoff": 2.0,
+        "deviate_payoff": 0.0,
+        "margin": 2.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Opera",
+        "deviation": "Football",
+        "obey_payoff": 2.0,
+        "deviate_payoff": 0.0,
+        "margin": 2.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Football",
+        "deviation": "Opera",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 0.0,
+        "margin": 3.0,
+        "holds": true
+      }
+    ],
+    "fake_details": [
+      {
+        "player": "row",
+        "recommendation": "Opera",
+        "deviation": "Football",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 2.0,
+        "margin": -2.0,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "Football",
+        "deviation": "Opera",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 3.0,
+        "margin": -3.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Opera",
+        "deviation": "Football",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 3.0,
+        "margin": -3.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Football",
+        "deviation": "Opera",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 2.0,
+        "margin": -2.0,
+        "holds": false
+      }
+    ]
+  },
+  {
+    "game": "Chicken",
+    "real_ce_ok": true,
+    "fake_ce_ok": false,
+    "real_details": [
+      {
+        "player": "row",
+        "recommendation": "Swerve",
+        "deviation": "Straight",
+        "obey_payoff": 1.8000000000000003,
+        "deviate_payoff": 1.6,
+        "margin": 0.20000000000000018,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Straight",
+        "deviation": "Swerve",
+        "obey_payoff": 2.4,
+        "deviate_payoff": 2.1999999999999997,
+        "margin": 0.20000000000000018,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Swerve",
+        "deviation": "Straight",
+        "obey_payoff": 1.8000000000000003,
+        "deviate_payoff": 1.6,
+        "margin": 0.20000000000000018,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Straight",
+        "deviation": "Swerve",
+        "obey_payoff": 2.4,
+        "deviate_payoff": 2.1999999999999997,
+        "margin": 0.20000000000000018,
+        "holds": true
+      }
+    ],
+    "fake_details": [
+      {
+        "player": "row",
+        "recommendation": "Swerve",
+        "deviation": "Straight",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 4.0,
+        "margin": -1.0,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "Straight",
+        "deviation": "Swerve",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 1.0,
+        "margin": -1.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Swerve",
+        "deviation": "Straight",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 4.0,
+        "margin": -1.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Straight",
+        "deviation": "Swerve",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 1.0,
+        "margin": -1.0,
+        "holds": false
+      }
+    ]
+  },
+  {
+    "game": "Pure Coordination",
+    "real_ce_ok": true,
+    "fake_ce_ok": false,
+    "real_details": [
+      {
+        "player": "row",
+        "recommendation": "A",
+        "deviation": "B",
+        "obey_payoff": 2.0,
+        "deviate_payoff": 0.0,
+        "margin": 2.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "B",
+        "deviation": "A",
+        "obey_payoff": 4.0,
+        "deviate_payoff": 0.0,
+        "margin": 4.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "A",
+        "deviation": "B",
+        "obey_payoff": 2.0,
+        "deviate_payoff": 0.0,
+        "margin": 2.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "B",
+        "deviation": "A",
+        "obey_payoff": 4.0,
+        "deviate_payoff": 0.0,
+        "margin": 4.0,
+        "holds": true
+      }
+    ],
+    "fake_details": [
+      {
+        "player": "row",
+        "recommendation": "A",
+        "deviation": "B",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 4.0,
+        "margin": -4.0,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "B",
+        "deviation": "A",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 2.0,
+        "margin": -2.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "A",
+        "deviation": "B",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 4.0,
+        "margin": -4.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "B",
+        "deviation": "A",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 2.0,
+        "margin": -2.0,
+        "holds": false
+      }
+    ]
+  },
+  {
+    "game": "Prisoner's Dilemma",
+    "real_ce_ok": true,
+    "fake_ce_ok": false,
+    "real_details": [
+      {
+        "player": "row",
+        "recommendation": "Defect",
+        "deviation": "Cooperate",
+        "obey_payoff": 1.0,
+        "deviate_payoff": 0.0,
+        "margin": 1.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Defect",
+        "deviation": "Cooperate",
+        "obey_payoff": 1.0,
+        "deviate_payoff": 0.0,
+        "margin": 1.0,
+        "holds": true
+      }
+    ],
+    "fake_details": [
+      {
+        "player": "row",
+        "recommendation": "Cooperate",
+        "deviation": "Defect",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 5.0,
+        "margin": -2.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Cooperate",
+        "deviation": "Defect",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 5.0,
+        "margin": -2.0,
+        "holds": false
+      }
+    ]
+  }
+]

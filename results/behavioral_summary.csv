@@ -1,0 +1,197 @@
+model,game,condition,recommendation,n,parsed,compliance_rate,ci_low,ci_high,p_vs_0_5
+claude-opus-4.6,Battle of the Sexes,C1,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C1,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C2,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C2,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C3,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C3,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C4,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C4,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C5,Football,20,20,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C5,Opera,20,20,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C7-fake,Football,20,20,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C7-fake,Opera,20,19,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C7-real,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Battle of the Sexes,C7-real,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+claude-opus-4.6,Chicken,C1,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C1,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C2,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C2,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C3,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C3,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C4,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C4,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C5,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C5,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Chicken,C7-fake,Straight,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Chicken,C7-fake,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Chicken,C7-real,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Chicken,C7-real,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C1,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C2,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C3,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C4,Cooperate,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C5,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C7-fake,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Prisoner's Dilemma,C7-real,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C1,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C1,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C2,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C2,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C3,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C3,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C4,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C4,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C5,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Pure Coordination,C5,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C7-fake,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Pure Coordination,C7-fake,B,5,5,0.0,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Pure Coordination,C7-real,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Pure Coordination,C7-real,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C1,Football,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C1,Opera,5,3,0.6,0.14663279963467254,0.9472550494736843,1.0
+deepseek-v4-pro,Battle of the Sexes,C2,Football,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C2,Opera,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C3,Football,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C3,Opera,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C4,Football,5,0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Battle of the Sexes,C4,Opera,5,1,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Battle of the Sexes,C5,Football,5,4,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Battle of the Sexes,C5,Opera,5,4,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Battle of the Sexes,C7-fake,Football,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Battle of the Sexes,C7-fake,Opera,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Battle of the Sexes,C7-real,Football,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Battle of the Sexes,C7-real,Opera,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Chicken,C1,Straight,5,4,0.8,0.28358206388191054,0.9949492366205319,0.375
+deepseek-v4-pro,Chicken,C1,Swerve,5,3,0.6,0.14663279963467254,0.9472550494736843,1.0
+deepseek-v4-pro,Chicken,C2,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Chicken,C2,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Chicken,C3,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Chicken,C3,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Chicken,C4,Straight,5,2,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Chicken,C4,Swerve,5,1,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Chicken,C5,Straight,5,4,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Chicken,C5,Swerve,5,4,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Chicken,C7-fake,Straight,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Chicken,C7-fake,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Chicken,C7-real,Straight,5,3,0.6,0.14663279963467254,0.9472550494736843,1.0
+deepseek-v4-pro,Chicken,C7-real,Swerve,5,4,0.8,0.28358206388191054,0.9949492366205319,0.375
+deepseek-v4-pro,Prisoner's Dilemma,C1,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Prisoner's Dilemma,C2,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Prisoner's Dilemma,C3,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Prisoner's Dilemma,C4,Cooperate,5,4,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Prisoner's Dilemma,C5,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Prisoner's Dilemma,C7-fake,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Prisoner's Dilemma,C7-real,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Pure Coordination,C1,A,5,2,0.4,0.05274495052631566,0.8533672003653274,1.0
+deepseek-v4-pro,Pure Coordination,C1,B,5,4,0.8,0.28358206388191054,0.9949492366205319,0.375
+deepseek-v4-pro,Pure Coordination,C2,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Pure Coordination,C2,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Pure Coordination,C3,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Pure Coordination,C3,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Pure Coordination,C4,A,5,2,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Pure Coordination,C4,B,5,0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Pure Coordination,C5,A,5,1,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Pure Coordination,C5,B,5,0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Pure Coordination,C7-fake,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Pure Coordination,C7-fake,B,5,5,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Pure Coordination,C7-real,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+deepseek-v4-pro,Pure Coordination,C7-real,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Battle of the Sexes,C1,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gemini-3.1-pro,Battle of the Sexes,C1,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gemini-3.1-pro,Battle of the Sexes,C2,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gemini-3.1-pro,Battle of the Sexes,C2,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gemini-3.1-pro,Battle of the Sexes,C3,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gemini-3.1-pro,Battle of the Sexes,C3,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gemini-3.1-pro,Battle of the Sexes,C4,Football,20,19,0.05,0.0012650894979560335,0.24873276277202772,4.00543212890625e-05
+gemini-3.1-pro,Battle of the Sexes,C4,Opera,10,10,0.4,0.12155225811982723,0.7376219233930549,0.75390625
+gemini-3.1-pro,Battle of the Sexes,C5,Football,10,10,0.2,0.025210726326833497,0.5560954623076415,0.109375
+gemini-3.1-pro,Battle of the Sexes,C5,Opera,10,10,0.6,0.2623780766069451,0.8784477418801728,0.75390625
+gemini-3.1-pro,Battle of the Sexes,C7-fake,Football,10,10,0.0,0.0,0.3084971078187629,0.001953125
+gemini-3.1-pro,Battle of the Sexes,C7-fake,Opera,10,10,0.0,0.0,0.3084971078187629,0.001953125
+gemini-3.1-pro,Battle of the Sexes,C7-real,Football,10,10,1.0,0.6915028921812371,1.0,0.001953125
+gemini-3.1-pro,Battle of the Sexes,C7-real,Opera,10,10,1.0,0.6915028921812371,1.0,0.001953125
+gemini-3.1-pro,Chicken,C1,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Chicken,C1,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Chicken,C2,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Chicken,C2,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Chicken,C3,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Chicken,C3,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Chicken,C4,Straight,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Chicken,C4,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Chicken,C5,Straight,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Chicken,C5,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Chicken,C7-fake,Straight,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Chicken,C7-fake,Swerve,5,4,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Chicken,C7-real,Straight,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gemini-3.1-pro,Chicken,C7-real,Swerve,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gemini-3.1-pro,Prisoner's Dilemma,C1,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Prisoner's Dilemma,C2,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Prisoner's Dilemma,C3,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Prisoner's Dilemma,C4,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Prisoner's Dilemma,C5,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Prisoner's Dilemma,C7-fake,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Prisoner's Dilemma,C7-real,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C1,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C1,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C2,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C2,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C3,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C3,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C4,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Pure Coordination,C4,B,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gemini-3.1-pro,Pure Coordination,C5,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Pure Coordination,C5,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C7-fake,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Pure Coordination,C7-fake,B,5,5,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Pure Coordination,C7-real,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gemini-3.1-pro,Pure Coordination,C7-real,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Battle of the Sexes,C1,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C1,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C2,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C2,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C3,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C3,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C4,Football,20,20,0.4,0.19119006072557054,0.6394574126927552,0.5034446716308594
+gpt-5.4,Battle of the Sexes,C4,Opera,20,20,0.75,0.5089541282920425,0.9134285308985655,0.04138946533203125
+gpt-5.4,Battle of the Sexes,C5,Football,20,20,0.4,0.19119006072557054,0.6394574126927552,0.5034446716308594
+gpt-5.4,Battle of the Sexes,C5,Opera,20,20,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C7-fake,Football,20,20,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C7-fake,Opera,20,20,0.0,0.0,0.16843347098308548,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C7-real,Football,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Battle of the Sexes,C7-real,Opera,20,20,1.0,0.8315665290169145,1.0,1.9073486328125e-06
+gpt-5.4,Chicken,C1,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C1,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C2,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C2,Swerve,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gpt-5.4,Chicken,C3,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C3,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C4,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C4,Swerve,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gpt-5.4,Chicken,C5,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C5,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Chicken,C7-fake,Straight,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Chicken,C7-fake,Swerve,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Chicken,C7-real,Straight,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Chicken,C7-real,Swerve,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Prisoner's Dilemma,C1,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Prisoner's Dilemma,C2,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Prisoner's Dilemma,C3,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Prisoner's Dilemma,C4,Cooperate,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Prisoner's Dilemma,C5,Cooperate,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Prisoner's Dilemma,C7-fake,Cooperate,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Prisoner's Dilemma,C7-real,Defect,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C1,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C1,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C2,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C2,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C3,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C3,B,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C4,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Pure Coordination,C4,B,5,5,0.2,0.005050763379468115,0.7164179361180895,0.375
+gpt-5.4,Pure Coordination,C5,A,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gpt-5.4,Pure Coordination,C5,B,5,5,0.8,0.28358206388191054,0.9949492366205319,0.375
+gpt-5.4,Pure Coordination,C7-fake,A,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Pure Coordination,C7-fake,B,5,5,0.0,0.0,0.5218237501049814,0.0625
+gpt-5.4,Pure Coordination,C7-real,A,5,5,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Pure Coordination,C7-real,B,5,5,1.0,0.47817624989501856,1.0,0.0625
