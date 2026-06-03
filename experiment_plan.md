@@ -193,6 +193,22 @@ For **each game**, generate prompts under the following conditions. The LLM is a
 - Tests whether performing the analysis right before acting closes or reveals the knowledge–action gap.
 - Implement as a **multi-turn** conversation (two messages in the messages list).
 
+### Optional C7 intervention pilots
+
+These are not part of the default full run. Generate them only when explicitly
+requested with `--conditions`, so the project can test interventions without
+multiplying API cost.
+
+- `C7-fake-own-audit`: fake CE distribution, first turn audits only Player 1's
+  private recommendation with an incentive-compatibility checklist, second turn
+  asks for the action.
+- `C7-fake-skeptical`: fake CE distribution, first turn treats the CE label as
+  an unverified institutional claim and asks the model to audit it, second turn
+  asks for the action.
+
+These conditions test which prompt mechanisms can move an LLM agent from
+institutional obedience toward active mechanism auditing.
+
 ---
 
 ## 5  Prompt Templates
@@ -303,7 +319,22 @@ Compare C3 (real CE, labeled) vs C4 (fake CE, labeled).
 ### 9.8 Summary Table
 Produce a CSV/DataFrame: rows = (game, condition), columns = models, cells = compliance rate ± 95% CI (Wilson interval).
 
-### 9.9 Research Question Mapping
+### 9.9 Reasoning Features and Best Response
+
+Add response-level annotations for whether the model mentions payoff
+calculation, deviation, profitable deviation, CE labels, mediator trust, or
+skepticism toward institutional labels. Also compute Player 1's conditional
+best response under the displayed distribution and record whether the parsed
+action equals a best response.
+
+This makes it possible to separate:
+
+- obedience to the recommendation;
+- payoff-maximizing behavior;
+- textual evidence that the model audited incentives;
+- textual evidence that the model deferred to authority cues.
+
+### 9.10 Research Question Mapping
 Print a summary report that explicitly maps each statistical result to Q1, Q2, or Q3:
 ```
 === Q1: Do LLMs obey CE recommendations? ===

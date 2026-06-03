@@ -17,6 +17,12 @@ The experiment assigns the model to Player 1 and tests seven prompt conditions:
 - `C6-real` / `C6-fake`: analytical CE-identification task.
 - `C7-real` / `C7-fake`: analytical task followed by behavioral choice.
 
+Two optional C7 intervention conditions are available for focused follow-up
+runs. They are generated only when explicitly passed through `--conditions`:
+
+- `C7-fake-own-audit`: audit Player 1's private recommendation with an IC checklist.
+- `C7-fake-skeptical`: treat the CE label as an unverified institutional claim.
+
 Games currently included:
 
 - Battle of the Sexes
@@ -56,9 +62,23 @@ Outputs are written to `results/`:
 - `raw_{model}.jsonl`
 - `all_records_n5.csv`
 - `behavioral_summary_n5.csv`
+- `reasoning_summary_n5.csv`
 - `analytical_summary_n5.csv`
 - `ce_validation.json`
 - `figures/*.png`
+
+`all_records_n5.csv` also includes response-level reasoning tags and
+best-response annotations:
+
+- `reasoning_payoff_calc`
+- `reasoning_deviation`
+- `reasoning_profitable_deviation`
+- `reasoning_ce_label`
+- `reasoning_mediator_trust`
+- `reasoning_label_skepticism`
+- `best_response_action`
+- `best_response_margin`
+- `chose_best_response`
 
 ## Cost-Aware Continuation
 
@@ -72,11 +92,22 @@ python run_all.py --plan-only --retry-errors --n 5 \
 Run only a focused slice:
 
 ```bash
-python run_all.py --retry-errors --n 3 \
+python run_all.py --retry-errors --n 5 \
   --games Rock-Paper-Scissors "3x3 Dominated Strategy" \
   --conditions C4 C5 C6-fake \
-  --models gpt-5.4 gemini-3.1-pro \
-  --concurrency 2
+  --concurrency 3 \
+  --max-tokens 1024
+```
+
+Run a low-cost DeepSeek-only C7 intervention pilot:
+
+```bash
+python run_all.py --retry-errors --n 2 \
+  --games Rock-Paper-Scissors "3x3 Dominated Strategy" \
+  --conditions C7-fake-own-audit C7-fake-skeptical \
+  --models deepseek-v4-pro \
+  --concurrency 1 \
+  --max-tokens 1024
 ```
 
 Useful switches:

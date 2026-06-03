@@ -17,6 +17,9 @@ from .parser import parse_action, parse_analytical_correctness
 from .prompts import generate_prompt
 
 
+INTERVENTION_CONDITIONS = {"C7-fake-own-audit", "C7-fake-skeptical"}
+
+
 @dataclass(frozen=True)
 class ExperimentJob:
     game: Game
@@ -58,8 +61,13 @@ def load_existing_keys(
                     record = json.loads(line)
                 except json.JSONDecodeError:
                     continue
-                if retry_errors and record.get("error_type"):
-                    continue
+                if retry_errors:
+                    raw_response = str(record.get("raw_response") or "").strip()
+                    analysis_response = str(record.get("analysis_response") or "").strip()
+                    if record.get("error_type") or not raw_response:
+                        continue
+                    if str(record.get("condition", "")).startswith("C7") and not analysis_response:
+                        continue
                 keys.add(
                     (
                         record.get("game"),
@@ -78,6 +86,7 @@ def build_jobs(
     n: int,
     *,
     include_c7_fake: bool = True,
+    requested_conditions: set[str] | None = None,
 ) -> list[ExperimentJob]:
     aliases = config.MODEL_ALIASES
     jobs: list[ExperimentJob] = []
@@ -96,6 +105,9 @@ def build_jobs(
         }
         if include_c7_fake:
             condition_recs["C7-fake"] = fake_recs
+        for condition in sorted(INTERVENTION_CONDITIONS):
+            if requested_conditions is not None and condition in requested_conditions:
+                condition_recs[condition] = fake_recs
 
         for model_label in model_labels:
             model_name = aliases.get(model_label, model_label)
@@ -245,10 +257,16 @@ class Runner:
             messages = generate_prompt(job.game, condition, job.recommendation)
             if not isinstance(messages, list):
                 raise TypeError("C7 prompt must be a message list.")
+            analysis_max_tokens = (
+                min(self.max_tokens, 768)
+                if condition in INTERVENTION_CONDITIONS
+                else self.max_tokens
+            )
             analysis_raw = await self._call_chat(
                 client,
                 model=job.model_name,
                 messages=[messages[0]],
+                max_tokens=analysis_max_tokens,
             )
             messages[1]["content"] = analysis_raw
             raw = await self._call_chat(
@@ -375,7 +393,13 @@ async def run_experiments(
     max_pending: int | None = None,
     plan_only: bool = False,
 ) -> int:
-    jobs = build_jobs(games, model_labels, n, include_c7_fake=include_c7_fake)
+    jobs = build_jobs(
+        games,
+        model_labels,
+        n,
+        include_c7_fake=include_c7_fake,
+        requested_conditions=conditions,
+    )
     if conditions is not None:
         jobs = [job for job in jobs if job.condition in conditions]
     existing = load_existing_keys(results_dir, retry_errors=retry_errors)

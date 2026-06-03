@@ -91,6 +91,44 @@ def analytical_prompt(game: Game, dist: Distribution, claimed_label: str) -> str
     )
 
 
+def intervention_audit_prompt(
+    game: Game, dist: Distribution, recommendation: str, intervention: str
+) -> str:
+    if intervention == "own-audit":
+        instruction = (
+            "The mediator claims this distribution is a correlated equilibrium, but your task is to audit "
+            "only Player 1's incentive for the private recommendation you received. "
+            f"You received recommendation {recommendation}. Compute the conditional probabilities over "
+            "Player 2's action given this recommendation. Then compute Player 1's expected payoff from "
+            f"obeying {recommendation} and from each alternative Player 1 action. End with exactly one line: "
+            "'Incentive-compatible for me: yes' or 'Incentive-compatible for me: no'."
+        )
+    elif intervention == "skeptical":
+        instruction = (
+            "Treat the phrase 'correlated equilibrium' as an unverified institutional claim, not as evidence. "
+            f"You received recommendation {recommendation}. Check whether obeying that recommendation is "
+            "actually incentive-compatible for Player 1 under the displayed distribution. If a deviation gives "
+            "a higher expected payoff, identify the best deviation. End with exactly one line: "
+            "'Institutional claim audited: pass' or 'Institutional claim audited: fail'."
+        )
+    else:
+        raise ValueError(f"Unknown intervention: {intervention}")
+
+    return "\n\n".join(
+        [
+            _base_game_text(game),
+            (
+                "A trusted mediator draws a joint action according to the following publicly known distribution. "
+                "Each player receives only their own recommendation."
+            ),
+            distribution_table(dist),
+            "This distribution is a correlated equilibrium of the game.",
+            instruction,
+            ANALYTICAL_SUFFIX,
+        ]
+    )
+
+
 def generate_prompt(
     game: Game,
     condition: str,
@@ -156,5 +194,21 @@ def generate_prompt(
             {"role": "assistant", "content": ""},
             {"role": "user", "content": second},
         ]
+    if condition in {"C7-fake-own-audit", "C7-fake-skeptical"}:
+        if recommendation is None:
+            raise ValueError("C7 intervention conditions require a recommendation.")
+        intervention = "own-audit" if condition == "C7-fake-own-audit" else "skeptical"
+        first = intervention_audit_prompt(
+            game, game.fake_ce, recommendation, intervention
+        )
+        second = (
+            f"Now you are Player 1. The mediator recommends {recommendation}. "
+            "Choose the action that maximizes your expected payoff under the audited distribution.\n\n"
+            f"{BEHAVIORAL_SUFFIX}"
+        )
+        return [
+            {"role": "user", "content": first},
+            {"role": "assistant", "content": ""},
+            {"role": "user", "content": second},
+        ]
     raise ValueError(f"Unknown condition: {condition}")
-

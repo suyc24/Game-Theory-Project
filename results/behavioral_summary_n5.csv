@@ -2,10 +2,10 @@ model,game,condition,recommendation,attempted_n,parsed,compliance_rate,complianc
 claude-opus-4.6,3x3 Dominated Strategy,C1,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,3x3 Dominated Strategy,C2,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,3x3 Dominated Strategy,C3,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,3x3 Dominated Strategy,C4,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,3x3 Dominated Strategy,C4,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,3x3 Dominated Strategy,C5,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,3x3 Dominated Strategy,C5,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,3x3 Dominated Strategy,C4,Middle,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,3x3 Dominated Strategy,C4,Up,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,3x3 Dominated Strategy,C5,Middle,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,3x3 Dominated Strategy,C5,Up,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
 claude-opus-4.6,3x3 Dominated Strategy,C7-fake,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,3x3 Dominated Strategy,C7-fake,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,3x3 Dominated Strategy,C7-real,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
@@ -67,12 +67,12 @@ claude-opus-4.6,Rock-Paper-Scissors,C2,Scissors,5,0,0.0,,0.0,0.5218237501049814,
 claude-opus-4.6,Rock-Paper-Scissors,C3,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,Rock-Paper-Scissors,C3,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,Rock-Paper-Scissors,C3,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,Rock-Paper-Scissors,C4,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,Rock-Paper-Scissors,C4,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,Rock-Paper-Scissors,C4,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,Rock-Paper-Scissors,C5,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,Rock-Paper-Scissors,C5,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-claude-opus-4.6,Rock-Paper-Scissors,C5,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
+claude-opus-4.6,Rock-Paper-Scissors,C4,Paper,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Rock-Paper-Scissors,C4,Rock,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Rock-Paper-Scissors,C4,Scissors,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Rock-Paper-Scissors,C5,Paper,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Rock-Paper-Scissors,C5,Rock,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+claude-opus-4.6,Rock-Paper-Scissors,C5,Scissors,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
 claude-opus-4.6,Rock-Paper-Scissors,C7-fake,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,Rock-Paper-Scissors,C7-fake,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 claude-opus-4.6,Rock-Paper-Scissors,C7-fake,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
@@ -82,12 +82,16 @@ claude-opus-4.6,Rock-Paper-Scissors,C7-real,Scissors,5,0,0.0,,0.0,0.521823750104
 deepseek-v4-pro,3x3 Dominated Strategy,C1,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,3x3 Dominated Strategy,C2,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,3x3 Dominated Strategy,C3,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,3x3 Dominated Strategy,C4,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,3x3 Dominated Strategy,C4,Middle,5,1,0.0,0.0,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,3x3 Dominated Strategy,C4,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,3x3 Dominated Strategy,C5,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,3x3 Dominated Strategy,C5,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,3x3 Dominated Strategy,C5,Middle,5,2,0.0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,3x3 Dominated Strategy,C5,Up,5,1,0.0,0.0,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,3x3 Dominated Strategy,C7-fake,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,3x3 Dominated Strategy,C7-fake,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,3x3 Dominated Strategy,C7-fake-own-audit,Middle,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,3x3 Dominated Strategy,C7-fake-own-audit,Up,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,3x3 Dominated Strategy,C7-fake-skeptical,Middle,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,3x3 Dominated Strategy,C7-fake-skeptical,Up,2,2,0.0,0.0,0.0,0.841886116991607,0.5
 deepseek-v4-pro,3x3 Dominated Strategy,C7-real,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Battle of the Sexes,C1,Football,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
 deepseek-v4-pro,Battle of the Sexes,C1,Opera,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
@@ -147,25 +151,31 @@ deepseek-v4-pro,Rock-Paper-Scissors,C2,Scissors,5,0,0.0,,0.0,0.5218237501049814,
 deepseek-v4-pro,Rock-Paper-Scissors,C3,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C3,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C3,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,Rock-Paper-Scissors,C4,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,Rock-Paper-Scissors,C4,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,Rock-Paper-Scissors,C4,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,Rock-Paper-Scissors,C5,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,Rock-Paper-Scissors,C5,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-deepseek-v4-pro,Rock-Paper-Scissors,C5,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Rock-Paper-Scissors,C4,Paper,5,1,0.0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Rock-Paper-Scissors,C4,Rock,5,2,0.0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Rock-Paper-Scissors,C4,Scissors,5,2,0.0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Rock-Paper-Scissors,C5,Paper,5,3,0.2,0.3333333333333333,0.005050763379468115,0.7164179361180895,0.375
+deepseek-v4-pro,Rock-Paper-Scissors,C5,Rock,5,3,0.0,0.0,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Rock-Paper-Scissors,C5,Scissors,5,1,0.0,0.0,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C7-fake,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C7-fake,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C7-fake,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
+deepseek-v4-pro,Rock-Paper-Scissors,C7-fake-own-audit,Paper,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,Rock-Paper-Scissors,C7-fake-own-audit,Rock,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,Rock-Paper-Scissors,C7-fake-own-audit,Scissors,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,Rock-Paper-Scissors,C7-fake-skeptical,Paper,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,Rock-Paper-Scissors,C7-fake-skeptical,Rock,2,2,0.0,0.0,0.0,0.841886116991607,0.5
+deepseek-v4-pro,Rock-Paper-Scissors,C7-fake-skeptical,Scissors,2,2,0.0,0.0,0.0,0.841886116991607,0.5
 deepseek-v4-pro,Rock-Paper-Scissors,C7-real,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C7-real,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 deepseek-v4-pro,Rock-Paper-Scissors,C7-real,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,3x3 Dominated Strategy,C1,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,3x3 Dominated Strategy,C2,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,3x3 Dominated Strategy,C3,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,3x3 Dominated Strategy,C4,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,3x3 Dominated Strategy,C4,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,3x3 Dominated Strategy,C5,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,3x3 Dominated Strategy,C5,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,3x3 Dominated Strategy,C4,Middle,5,5,0.0,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,3x3 Dominated Strategy,C4,Up,5,5,0.0,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,3x3 Dominated Strategy,C5,Middle,5,5,0.0,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,3x3 Dominated Strategy,C5,Up,5,4,0.2,0.25,0.005050763379468115,0.7164179361180895,0.375
 gemini-3.1-pro,3x3 Dominated Strategy,C7-fake,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,3x3 Dominated Strategy,C7-fake,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,3x3 Dominated Strategy,C7-real,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
@@ -227,12 +237,12 @@ gemini-3.1-pro,Rock-Paper-Scissors,C2,Scissors,5,0,0.0,,0.0,0.5218237501049814,0
 gemini-3.1-pro,Rock-Paper-Scissors,C3,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,Rock-Paper-Scissors,C3,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,Rock-Paper-Scissors,C3,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,Rock-Paper-Scissors,C4,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,Rock-Paper-Scissors,C4,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,Rock-Paper-Scissors,C4,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,Rock-Paper-Scissors,C5,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,Rock-Paper-Scissors,C5,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gemini-3.1-pro,Rock-Paper-Scissors,C5,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Rock-Paper-Scissors,C4,Paper,5,5,0.4,0.4,0.05274495052631566,0.8533672003653274,1.0
+gemini-3.1-pro,Rock-Paper-Scissors,C4,Rock,5,5,0.6,0.6,0.14663279963467254,0.9472550494736843,1.0
+gemini-3.1-pro,Rock-Paper-Scissors,C4,Scissors,5,5,0.6,0.6,0.14663279963467254,0.9472550494736843,1.0
+gemini-3.1-pro,Rock-Paper-Scissors,C5,Paper,5,5,0.0,0.0,0.0,0.5218237501049814,0.0625
+gemini-3.1-pro,Rock-Paper-Scissors,C5,Rock,5,3,0.2,0.3333333333333333,0.005050763379468115,0.7164179361180895,0.375
+gemini-3.1-pro,Rock-Paper-Scissors,C5,Scissors,5,5,0.0,0.0,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,Rock-Paper-Scissors,C7-fake,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,Rock-Paper-Scissors,C7-fake,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gemini-3.1-pro,Rock-Paper-Scissors,C7-fake,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
@@ -242,10 +252,10 @@ gemini-3.1-pro,Rock-Paper-Scissors,C7-real,Scissors,5,0,0.0,,0.0,0.5218237501049
 gpt-5.4,3x3 Dominated Strategy,C1,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,3x3 Dominated Strategy,C2,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,3x3 Dominated Strategy,C3,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,3x3 Dominated Strategy,C4,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,3x3 Dominated Strategy,C4,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,3x3 Dominated Strategy,C5,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,3x3 Dominated Strategy,C5,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
+gpt-5.4,3x3 Dominated Strategy,C4,Middle,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,3x3 Dominated Strategy,C4,Up,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,3x3 Dominated Strategy,C5,Middle,5,5,0.8,0.8,0.28358206388191054,0.9949492366205319,0.375
+gpt-5.4,3x3 Dominated Strategy,C5,Up,5,5,0.2,0.2,0.005050763379468115,0.7164179361180895,0.375
 gpt-5.4,3x3 Dominated Strategy,C7-fake,Middle,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,3x3 Dominated Strategy,C7-fake,Up,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,3x3 Dominated Strategy,C7-real,Down,5,0,0.0,,0.0,0.5218237501049814,0.0625
@@ -307,12 +317,12 @@ gpt-5.4,Rock-Paper-Scissors,C2,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,Rock-Paper-Scissors,C3,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,Rock-Paper-Scissors,C3,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,Rock-Paper-Scissors,C3,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,Rock-Paper-Scissors,C4,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,Rock-Paper-Scissors,C4,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,Rock-Paper-Scissors,C4,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,Rock-Paper-Scissors,C5,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,Rock-Paper-Scissors,C5,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
-gpt-5.4,Rock-Paper-Scissors,C5,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
+gpt-5.4,Rock-Paper-Scissors,C4,Paper,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Rock-Paper-Scissors,C4,Rock,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Rock-Paper-Scissors,C4,Scissors,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
+gpt-5.4,Rock-Paper-Scissors,C5,Paper,5,5,0.8,0.8,0.28358206388191054,0.9949492366205319,0.375
+gpt-5.4,Rock-Paper-Scissors,C5,Rock,5,5,0.4,0.4,0.05274495052631566,0.8533672003653274,1.0
+gpt-5.4,Rock-Paper-Scissors,C5,Scissors,5,5,1.0,1.0,0.47817624989501856,1.0,0.0625
 gpt-5.4,Rock-Paper-Scissors,C7-fake,Paper,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,Rock-Paper-Scissors,C7-fake,Rock,5,0,0.0,,0.0,0.5218237501049814,0.0625
 gpt-5.4,Rock-Paper-Scissors,C7-fake,Scissors,5,0,0.0,,0.0,0.5218237501049814,0.0625
