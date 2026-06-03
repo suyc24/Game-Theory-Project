@@ -177,6 +177,55 @@ def get_games() -> list[Game]:
             fake_ce={("Cooperate", "Cooperate"): 1.0},
             description="Dominant-strategy defection control.",
         ),
+        Game(
+            name="Rock-Paper-Scissors",
+            row_actions=("Rock", "Paper", "Scissors"),
+            col_actions=("Rock", "Paper", "Scissors"),
+            row_payoffs=np.array(
+                [[0, -1, 1], [1, 0, -1], [-1, 1, 0]], dtype=float
+            ),
+            col_payoffs=np.array(
+                [[0, 1, -1], [-1, 0, 1], [1, -1, 0]], dtype=float
+            ),
+            real_ce={
+                ("Rock", "Rock"): 1 / 9,
+                ("Rock", "Paper"): 1 / 9,
+                ("Rock", "Scissors"): 1 / 9,
+                ("Paper", "Rock"): 1 / 9,
+                ("Paper", "Paper"): 1 / 9,
+                ("Paper", "Scissors"): 1 / 9,
+                ("Scissors", "Rock"): 1 / 9,
+                ("Scissors", "Paper"): 1 / 9,
+                ("Scissors", "Scissors"): 1 / 9,
+            },
+            fake_ce={
+                ("Rock", "Paper"): 1 / 6,
+                ("Paper", "Rock"): 1 / 6,
+                ("Rock", "Scissors"): 1 / 6,
+                ("Scissors", "Rock"): 1 / 6,
+                ("Paper", "Scissors"): 1 / 6,
+                ("Scissors", "Paper"): 1 / 6,
+            },
+            description="Zero-sum cyclic game with a larger action space.",
+        ),
+        Game(
+            name="3x3 Dominated Strategy",
+            row_actions=("Up", "Middle", "Down"),
+            col_actions=("Left", "Center", "Right"),
+            row_payoffs=np.array(
+                [[3, 2, 1], [4, 5, 3], [5, 4, 6]], dtype=float
+            ),
+            col_payoffs=np.array(
+                [[3, 4, 2], [2, 5, 3], [1, 3, 6]], dtype=float
+            ),
+            real_ce={("Down", "Right"): 1.0},
+            fake_ce={
+                ("Up", "Left"): 0.5,
+                ("Middle", "Left"): 0.25,
+                ("Middle", "Right"): 0.25,
+            },
+            description="3x3 game with strict dominance for both players.",
+        ),
     ]
 
 

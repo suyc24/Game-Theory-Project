@@ -9,6 +9,9 @@ import pandas as pd
 from scipy.stats import binomtest
 
 
+KEY_COLUMNS = ["model", "game", "condition", "recommendation", "trial"]
+
+
 def load_records(results_dir: Path) -> pd.DataFrame:
     rows = []
     for path in sorted(results_dir.glob("raw_*.jsonl")):
@@ -30,11 +33,44 @@ def filter_trials(df: pd.DataFrame, max_trials: int | None) -> pd.DataFrame:
     return filtered[filtered["trial"].between(0, max_trials - 1)]
 
 
+def deduplicate_records(df: pd.DataFrame) -> pd.DataFrame:
+    """Keep one record per experimental key, preferring successful attempts."""
+
+    if df.empty or any(column not in df for column in KEY_COLUMNS):
+        return df
+
+    deduped = df.copy()
+    error_series = deduped.get("error_type", pd.Series(index=deduped.index, dtype=object))
+    has_error = error_series.notna() & (error_series.astype(str).str.len() > 0)
+    parse_success = deduped.get(
+        "parse_success", pd.Series(False, index=deduped.index)
+    ).fillna(False)
+    analytical_known = deduped.get(
+        "analytical_correct", pd.Series(index=deduped.index, dtype=object)
+    ).notna()
+    raw_present = (
+        deduped.get("raw_response", pd.Series("", index=deduped.index))
+        .fillna("")
+        .astype(str)
+        .str.len()
+        > 0
+    )
+
+    deduped["_quality"] = 0
+    deduped.loc[raw_present & ~has_error, "_quality"] = 1
+    deduped.loc[(parse_success | analytical_known) & ~has_error, "_quality"] = 2
+    deduped["_source_order"] = range(len(deduped))
+    deduped = deduped.sort_values(KEY_COLUMNS + ["_quality", "_source_order"])
+    deduped = deduped.drop_duplicates(KEY_COLUMNS, keep="last")
+    return deduped.drop(columns=["_quality", "_source_order"])
+
+
 def summarize(
     df: pd.DataFrame, results_dir: Path, max_trials: int | None = None
 ) -> dict[str, Path]:
     outputs: dict[str, Path] = {}
     df = filter_trials(df, max_trials)
+    df = deduplicate_records(df)
     if df.empty:
         return outputs
     suffix = f"_n{max_trials}" if max_trials is not None else ""

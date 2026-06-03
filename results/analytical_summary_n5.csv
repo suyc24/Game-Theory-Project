@@ -1,4 +1,6 @@
 model,game,condition,n,correct_rate
+claude-opus-4.6,3x3 Dominated Strategy,C6-fake,5,
+claude-opus-4.6,3x3 Dominated Strategy,C6-real,5,
 claude-opus-4.6,Battle of the Sexes,C6-fake,5,1.0
 claude-opus-4.6,Battle of the Sexes,C6-real,5,1.0
 claude-opus-4.6,Chicken,C6-fake,5,1.0
@@ -7,6 +9,10 @@ claude-opus-4.6,Prisoner's Dilemma,C6-fake,5,1.0
 claude-opus-4.6,Prisoner's Dilemma,C6-real,5,1.0
 claude-opus-4.6,Pure Coordination,C6-fake,5,1.0
 claude-opus-4.6,Pure Coordination,C6-real,5,1.0
+claude-opus-4.6,Rock-Paper-Scissors,C6-fake,5,
+claude-opus-4.6,Rock-Paper-Scissors,C6-real,5,
+deepseek-v4-pro,3x3 Dominated Strategy,C6-fake,5,
+deepseek-v4-pro,3x3 Dominated Strategy,C6-real,5,
 deepseek-v4-pro,Battle of the Sexes,C6-fake,5,1.0
 deepseek-v4-pro,Battle of the Sexes,C6-real,5,1.0
 deepseek-v4-pro,Chicken,C6-fake,5,1.0
@@ -15,6 +21,10 @@ deepseek-v4-pro,Prisoner's Dilemma,C6-fake,5,1.0
 deepseek-v4-pro,Prisoner's Dilemma,C6-real,5,1.0
 deepseek-v4-pro,Pure Coordination,C6-fake,5,0.75
 deepseek-v4-pro,Pure Coordination,C6-real,5,1.0
+deepseek-v4-pro,Rock-Paper-Scissors,C6-fake,5,
+deepseek-v4-pro,Rock-Paper-Scissors,C6-real,5,
+gemini-3.1-pro,3x3 Dominated Strategy,C6-fake,5,
+gemini-3.1-pro,3x3 Dominated Strategy,C6-real,5,
 gemini-3.1-pro,Battle of the Sexes,C6-fake,5,0.4
 gemini-3.1-pro,Battle of the Sexes,C6-real,5,1.0
 gemini-3.1-pro,Chicken,C6-fake,5,0.6
@@ -23,11 +33,17 @@ gemini-3.1-pro,Prisoner's Dilemma,C6-fake,5,1.0
 gemini-3.1-pro,Prisoner's Dilemma,C6-real,5,1.0
 gemini-3.1-pro,Pure Coordination,C6-fake,5,0.2
 gemini-3.1-pro,Pure Coordination,C6-real,5,1.0
+gemini-3.1-pro,Rock-Paper-Scissors,C6-fake,5,
+gemini-3.1-pro,Rock-Paper-Scissors,C6-real,5,
+gpt-5.4,3x3 Dominated Strategy,C6-fake,5,
+gpt-5.4,3x3 Dominated Strategy,C6-real,5,
 gpt-5.4,Battle of the Sexes,C6-fake,5,1.0
 gpt-5.4,Battle of the Sexes,C6-real,5,1.0
-gpt-5.4,Chicken,C6-fake,5,1.0
+gpt-5.4,Chicken,C6-fake,5,0.8
 gpt-5.4,Chicken,C6-real,5,1.0
 gpt-5.4,Prisoner's Dilemma,C6-fake,5,0.8
 gpt-5.4,Prisoner's Dilemma,C6-real,5,1.0
 gpt-5.4,Pure Coordination,C6-fake,5,1.0
 gpt-5.4,Pure Coordination,C6-real,5,1.0
+gpt-5.4,Rock-Paper-Scissors,C6-fake,5,
+gpt-5.4,Rock-Paper-Scissors,C6-real,5,

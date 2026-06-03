@@ -45,7 +45,9 @@ def _record_path(results_dir: Path, model_label: str) -> Path:
     return results_dir / f"raw_{_slug(model_label)}.jsonl"
 
 
-def load_existing_keys(results_dir: Path) -> set[tuple[str, str, str, str, int]]:
+def load_existing_keys(
+    results_dir: Path, *, retry_errors: bool = False
+) -> set[tuple[str, str, str, str, int]]:
     keys = set()
     for path in results_dir.glob("raw_*.jsonl"):
         with path.open("r", encoding="utf-8") as handle:
@@ -55,6 +57,8 @@ def load_existing_keys(results_dir: Path) -> set[tuple[str, str, str, str, int]]
                 try:
                     record = json.loads(line)
                 except json.JSONDecodeError:
+                    continue
+                if retry_errors and record.get("error_type"):
                     continue
                 keys.add(
                     (
@@ -109,6 +113,12 @@ def build_jobs(
                             )
                         )
     return jobs
+
+
+def estimate_api_calls(jobs: list[ExperimentJob]) -> int:
+    """Estimate chat-completion calls, counting C7 as two calls."""
+
+    return sum(2 if job.condition.startswith("C7") else 1 for job in jobs)
 
 
 class Runner:
@@ -360,15 +370,26 @@ async def run_experiments(
     request_timeout: float,
     dry_run: bool = False,
     include_c7_fake: bool = True,
+    retry_errors: bool = False,
+    conditions: set[str] | None = None,
+    max_pending: int | None = None,
+    plan_only: bool = False,
 ) -> int:
     jobs = build_jobs(games, model_labels, n, include_c7_fake=include_c7_fake)
-    existing = load_existing_keys(results_dir)
-    pending = [job for job in jobs if job.key not in existing]
+    if conditions is not None:
+        jobs = [job for job in jobs if job.condition in conditions]
+    existing = load_existing_keys(results_dir, retry_errors=retry_errors)
+    all_pending = [job for job in jobs if job.key not in existing]
+    pending = all_pending
+    if max_pending is not None:
+        pending = all_pending[:max_pending]
     print(
-        f"Total jobs: {len(jobs)}; existing: {len(jobs) - len(pending)}; pending: {len(pending)}",
+        f"Total jobs: {len(jobs)}; existing: {len(jobs) - len(all_pending)}; "
+        f"pending total: {len(all_pending)}; planned this run: {len(pending)}; "
+        f"estimated API calls: {estimate_api_calls(pending)}",
         flush=True,
     )
-    if not pending:
+    if plan_only or not pending:
         return 0
     runner = Runner(
         results_dir=results_dir,

@@ -132,6 +132,30 @@ Define **4 two-player normal-form games** as Python dataclasses or dicts. Each g
   - Labeled as CE but deviating to Defect gives 5 > 3 → not IC.
 - Key feature: when recommended "Defect," this aligns with NE; when we test a fake CE that recommends "Cooperate," we see if the LLM blindly trusts the label.
 
+### Game 5 — Rock-Paper-Scissors (3×3)
+
+|              | Rock   | Paper  | Scissors |
+| ------------ | ------ | ------ | -------- |
+| **Rock**     | (0,0)  | (-1,1) | (1,-1)   |
+| **Paper**    | (1,-1) | (0,0)  | (-1,1)   |
+| **Scissors** | (-1,1) | (1,-1) | (0,0)    |
+
+- **Real CE distribution:** Uniform over all 9 cells (1/9 each). This is the unique CE.
+- **Fake CE distribution:** Uniform over the 6 off-diagonal cells (1/6 each). This distribution is not a CE because each player has a profitable deviation.
+- Key feature: tests whether LLMs understand mixed/cyclic CEs in a larger action space; zero-sum structure removes cooperative bias.
+
+### Game 6 — 3×3 Dominated Strategy
+
+|            | Left  | Center | Right |
+| ---------- | ----- | ------ | ----- |
+| **Up**     | (3,3) | (2,4)  | (1,2) |
+| **Middle** | (4,2) | (5,5)  | (3,3) |
+| **Down**   | (5,1) | (4,3)  | (6,6) |
+
+- **Real CE distribution:** {(Down, Right): 1.0} (pure Nash equilibrium)
+- **Fake CE distribution:** {(Up, Left): 0.5, (Middle, Left): 0.25, (Middle, Right): 0.25}
+- Key feature: Down is strictly dominant for Player 1, Right strictly dominant for Player 2. Tests whether LLMs recognize dominant strategies even when CE recommends something else.
+
 **Implementation note:** In `games.py`, write a function `verify_ic(game, distribution) -> bool` that numerically checks incentive-compatibility for every recommendation in the distribution. Run this at startup to confirm all "real" CEs are IC and all "fake" CEs are not IC.
 
 ---
@@ -202,8 +226,9 @@ API parameters for all calls:
 - `max_tokens = 2048`
 
 Total cells estimate:
-- 4 games × 7 conditions × ~2 recommendations per game on average × 4 models × 5 trials
-- ≈ 1,120 API calls (rough estimate; some conditions only have 1 recommendation)
+
+- 6 games × 7 conditions × 2~3 recommendations per game × 4 models × 5 trials
+- 1,840 API calls
 
 ---
 

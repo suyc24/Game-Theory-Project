@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 
 from ce_experiment import config
-from ce_experiment.analysis import filter_trials, load_records, summarize
+from ce_experiment.analysis import deduplicate_records, filter_trials, load_records, summarize
 from ce_experiment.games import get_games, validate_games
 from ce_experiment.runner import run_experiments
 from ce_experiment.visualize import make_figures
@@ -22,6 +22,16 @@ def parse_args() -> argparse.Namespace:
         nargs="+",
         default=config.DEFAULT_MODELS,
         help="model labels to run; labels are resolved through MODEL_ALIASES",
+    )
+    parser.add_argument(
+        "--games",
+        nargs="+",
+        help="optional game names to run; quote names containing spaces",
+    )
+    parser.add_argument(
+        "--conditions",
+        nargs="+",
+        help="optional condition names to run, such as C4 C5 C6-fake",
     )
     parser.add_argument(
         "--concurrency",
@@ -50,6 +60,21 @@ def parse_args() -> argparse.Namespace:
         help="omit the extra C7 fake-distribution behavioral extension",
     )
     parser.add_argument(
+        "--retry-errors",
+        action="store_true",
+        help="treat existing error records as incomplete and schedule them again",
+    )
+    parser.add_argument(
+        "--plan-only",
+        action="store_true",
+        help="print pending job counts and estimated API calls without calling the API",
+    )
+    parser.add_argument(
+        "--max-pending",
+        type=int,
+        help="cap the number of pending jobs to run in this invocation",
+    )
+    parser.add_argument(
         "--analyze-only",
         action="store_true",
         help="skip API calls and regenerate summaries/figures from existing JSONL",
@@ -65,11 +90,21 @@ def main() -> None:
     validation_path = args.results_dir / "ce_validation.json"
     validation_path.write_text(json.dumps(validation, indent=2), encoding="utf-8")
     print(f"CE validation written to {validation_path}", flush=True)
+    games = get_games()
+    if args.games:
+        requested_games = set(args.games)
+        known_games = {game.name for game in games}
+        unknown_games = requested_games - known_games
+        if unknown_games:
+            raise SystemExit(
+                f"Unknown game(s): {sorted(unknown_games)}. Known games: {sorted(known_games)}"
+            )
+        games = [game for game in games if game.name in requested_games]
 
     if not args.analyze_only:
         asyncio.run(
             run_experiments(
-                games=get_games(),
+                games=games,
                 model_labels=args.models,
                 n=args.n,
                 results_dir=args.results_dir,
@@ -80,12 +115,16 @@ def main() -> None:
                 request_timeout=args.request_timeout,
                 dry_run=args.dry_run,
                 include_c7_fake=not args.skip_c7_fake,
+                retry_errors=args.retry_errors,
+                conditions=set(args.conditions) if args.conditions else None,
+                max_pending=args.max_pending,
+                plan_only=args.plan_only,
             )
         )
 
     df = load_records(args.results_dir)
     outputs = summarize(df, args.results_dir, max_trials=args.n)
-    figure_df = filter_trials(df, args.n)
+    figure_df = deduplicate_records(filter_trials(df, args.n))
     figures = make_figures(figure_df, args.results_dir)
     print(
         f"Loaded {len(df)} raw records; analyzing {len(figure_df)} records with trial < {args.n}.",

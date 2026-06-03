@@ -286,5 +286,347 @@
         "holds": false
       }
     ]
+  },
+  {
+    "game": "Rock-Paper-Scissors",
+    "real_ce_ok": true,
+    "fake_ce_ok": false,
+    "real_details": [
+      {
+        "player": "row",
+        "recommendation": "Rock",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Rock",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Paper",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Paper",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Scissors",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Scissors",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Rock",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Rock",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Paper",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Paper",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Scissors",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Scissors",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.0,
+        "margin": 0.0,
+        "holds": true
+      }
+    ],
+    "fake_details": [
+      {
+        "player": "row",
+        "recommendation": "Rock",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": -0.5,
+        "margin": 0.5,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Rock",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.5,
+        "margin": -0.5,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "Paper",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.5,
+        "margin": -0.5,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "Paper",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": -0.5,
+        "margin": 0.5,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Scissors",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": -0.5,
+        "margin": 0.5,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Scissors",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.5,
+        "margin": -0.5,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Rock",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": -0.5,
+        "margin": 0.5,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Rock",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.5,
+        "margin": -0.5,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Paper",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.5,
+        "margin": -0.5,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Paper",
+        "deviation": "Scissors",
+        "obey_payoff": 0.0,
+        "deviate_payoff": -0.5,
+        "margin": 0.5,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Scissors",
+        "deviation": "Rock",
+        "obey_payoff": 0.0,
+        "deviate_payoff": -0.5,
+        "margin": 0.5,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Scissors",
+        "deviation": "Paper",
+        "obey_payoff": 0.0,
+        "deviate_payoff": 0.5,
+        "margin": -0.5,
+        "holds": false
+      }
+    ]
+  },
+  {
+    "game": "3x3 Dominated Strategy",
+    "real_ce_ok": true,
+    "fake_ce_ok": false,
+    "real_details": [
+      {
+        "player": "row",
+        "recommendation": "Down",
+        "deviation": "Up",
+        "obey_payoff": 6.0,
+        "deviate_payoff": 1.0,
+        "margin": 5.0,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Down",
+        "deviation": "Middle",
+        "obey_payoff": 6.0,
+        "deviate_payoff": 3.0,
+        "margin": 3.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Right",
+        "deviation": "Left",
+        "obey_payoff": 6.0,
+        "deviate_payoff": 1.0,
+        "margin": 5.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Right",
+        "deviation": "Center",
+        "obey_payoff": 6.0,
+        "deviate_payoff": 3.0,
+        "margin": 3.0,
+        "holds": true
+      }
+    ],
+    "fake_details": [
+      {
+        "player": "row",
+        "recommendation": "Up",
+        "deviation": "Middle",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 4.0,
+        "margin": -1.0,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "Up",
+        "deviation": "Down",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 5.0,
+        "margin": -2.0,
+        "holds": false
+      },
+      {
+        "player": "row",
+        "recommendation": "Middle",
+        "deviation": "Up",
+        "obey_payoff": 3.5,
+        "deviate_payoff": 2.0,
+        "margin": 1.5,
+        "holds": true
+      },
+      {
+        "player": "row",
+        "recommendation": "Middle",
+        "deviation": "Down",
+        "obey_payoff": 3.5,
+        "deviate_payoff": 5.5,
+        "margin": -2.0,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Left",
+        "deviation": "Center",
+        "obey_payoff": 2.6666666666666665,
+        "deviate_payoff": 4.333333333333333,
+        "margin": -1.6666666666666667,
+        "holds": false
+      },
+      {
+        "player": "column",
+        "recommendation": "Left",
+        "deviation": "Right",
+        "obey_payoff": 2.6666666666666665,
+        "deviate_payoff": 2.3333333333333335,
+        "margin": 0.3333333333333333,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Right",
+        "deviation": "Left",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 2.0,
+        "margin": 1.0,
+        "holds": true
+      },
+      {
+        "player": "column",
+        "recommendation": "Right",
+        "deviation": "Center",
+        "obey_payoff": 3.0,
+        "deviate_payoff": 5.0,
+        "margin": -2.0,
+        "holds": false
+      }
+    ]
   }
 ]
